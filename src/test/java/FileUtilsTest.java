@@ -14,7 +14,7 @@ public class FileUtilsTest {
         Files.createFile(folder.resolve("temp.txt"));
 
         FileUtils.deleteFiles(folder);
-
+        assertTrue(Files.isDirectory(folder));
         assertTrue(Files.exists(folder));
         assertEquals(0, Files.list(folder).count());
     }
