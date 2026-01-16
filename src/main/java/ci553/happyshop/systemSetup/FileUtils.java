@@ -6,7 +6,7 @@ import java.nio.file.attribute.BasicFileAttributes;
 
 
 public class FileUtils {
-
+//De;etes all files inside the folder while keeping the folder itsself
     public static void deleteFiles(Path folder) throws IOException {
         if (!Files.exists(folder)) return;
         Files.walkFileTree(folder, new SimpleFileVisitor<>() {
